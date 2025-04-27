@@ -8,7 +8,7 @@ export default function SignIn() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const API = "http://localhost:5000";
+  const API = "https://movie-data-backend.onrender.com";
 
   const handleLogin = async (e) => {
     e.preventDefault();
