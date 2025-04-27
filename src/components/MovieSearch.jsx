@@ -1,4 +1,3 @@
-// MovieSearch.js
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -72,15 +71,15 @@ const MovieSearch = () => {
   };
 
   return (
-    <div className="relative w-7 mr-0 max-w-xs -ml-92">
+    <div className="relative w-full max-w-xs mx-auto">
       {/* Search input */}
-      <div className="flex items-center justify-between w-100 bg-gray-800 rounded-md px-2 border border-gray-600 space-x-4">
+      <div className="flex items-center justify-between bg-gray-800 rounded-md px-2 border border-gray-600 space-x-4 w-full">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search..."
-          className="flex-1 bg-transparent text-white w-full px-2 py-1 focus:outline-none"
+          className="flex-1 bg-transparent text-white px-2 py-1 focus:outline-none w-full sm:w-80 md:w-96 lg:w-full"
         />
         <button className="text-yellow-400 p-2">
           <FaSearch />
@@ -89,7 +88,7 @@ const MovieSearch = () => {
 
       {/* Suggestion dropdown */}
       {filteredMovies.length > 0 && (
-        <ul className="absolute top-12 left-0 w-100 bg-[#1f1f1f] rounded shadow-md z-50 max-h-60 overflow-y-auto">
+        <ul className="absolute top-12 left-0 w-full bg-[#1f1f1f] rounded shadow-md z-50 max-h-60 overflow-y-auto">
           {filteredMovies.map((movie, index) => (
             <li
               key={movie._id || index}
