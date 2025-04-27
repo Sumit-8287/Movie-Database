@@ -58,12 +58,12 @@ const Navbar = ({ onSearch }) => {
       <MovieSearch />
 
       {/* Navbar buttons for larger screens */}
-      <div className="hidden md:flex items-center gap-3">
+      <div className="hidden md:flex items-center gap-3 md:mr-26 ">
         <button
           onClick={() => {
             navigate("/login");
           }}
-          className="text-xs font-semibold px-4 py-2 rounded border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition hover:cursor-pointer"
+          className="text-xs font-semibold px-4 py-2 rounded border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition hover:cursor-pointer "
         >
           Sign in
         </button>

@@ -71,15 +71,15 @@ const MovieSearch = () => {
   };
 
   return (
-    <div className="relative w-full max-w-xs mx-auto">
+    <div className="relative w-50 md:w-90 max-w-xs mx-auto ">
       {/* Search input */}
-      <div className="flex items-center justify-between bg-gray-800 rounded-md px-2 border border-gray-600 space-x-4 w-full">
+      <div className="flex items-center justify-between bg-gray-800 rounded-md px-2 border border-gray-600 space-x-4 w-full max-w-[500px] mx-auto">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search..."
-          className="flex-1 bg-transparent text-white px-2 py-1 focus:outline-none w-full sm:w-80 md:w-96 lg:w-full"
+          className="flex-1 bg-transparent text-white px-2 py-1 focus:outline-none w-90"
         />
         <button className="text-yellow-400 p-2">
           <FaSearch />
